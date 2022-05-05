@@ -13,9 +13,9 @@ function Nav() {
     console.log("click handled")
   }
 
-  function categorySelected(name) {
-    console.log(`${name} clicked`)
-  }
+  // function categorySelected(name) {
+  //   console.log(`${name} clicked`)
+  // }
 
   return (
     <header data-testid="header" className="flex-row px-1">
@@ -39,6 +39,7 @@ function Nav() {
           {
             categories.map((category) => (
               <li className="mx-1" key={category.name} >
+                 {/* wrap it in a function declaration  */}
                 <span onClick={() => { handleClick(); }}>{capitalizeFirstLetter(category.name)}</span>
               </li>
             ))
@@ -47,26 +48,26 @@ function Nav() {
 
 
 
-        <ul className="flex-row">
-      <li className="mx-2">
-        <a href="#about">
-          About me
-        </a>
-      </li>
-      <li>
-        <span>Contact</span>
-      </li>
-       {categories.map((category) => (
-        <li
-          className="mx-1"
-          key={category.name}
-        >
-          {/* wrap it in a function declaration  */}
-          <span onClick={() => categorySelected(category.name)} >{category.name}
-          </span>
-        </li>
-      ))}
-    </ul>
+        {/* <ul className="flex-row">
+          <li className="mx-2">
+            <a href="#about">
+              About me
+            </a>
+          </li>
+          <li>
+            <span>Contact</span>
+          </li>
+          {categories.map((category) => (
+            <li
+              className="mx-1"
+              key={category.name}
+            >
+             
+              <span onClick={() => categorySelected(category.name)} >{category.name}
+              </span>
+            </li>
+          ))}
+        </ul> */}
       </nav>
     </header>
   );

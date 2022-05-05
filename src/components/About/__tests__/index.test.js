@@ -10,7 +10,6 @@ import About from '..';
 // call the cleanup function using the afterEach global function from Jest:
 afterEach(cleanup);
 
-
 // use the describe function to declare the component we're testing
 describe('About component', () => {
     //renders About test
