@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import Nav from './components/Nav/';
+import Nav from './components/Nav/index_20-3-3_Feat_useState-in-App_prop-in-Nav';
 import About from './components/About';
-import Gallery from './components/Gallery/';
+import Gallery from './components/Gallery/index_20-3-3_Feat_useState-in-App_prop-in-Nav';
 
 // Apply useState on an array
 function App() {
@@ -26,7 +26,7 @@ function App() {
       ></Nav>
       <main>
         <div>
-          <Gallery currentCategory={currentCategory}></Gallery>
+          <Gallery></Gallery>
           <About></About>
         </div>
       </main>

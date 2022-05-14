@@ -1,13 +1,8 @@
-import React, { useEffect }  from 'react';
+import React from 'react';
 import { capitalizeFirstLetter } from '../../utils/helpers';
 
 function Nav(props) {
   const { categories = [], setCurrentCategory, currentCategory, } = props;
-
-  //  the first argument is the callback function, and the second argument is an array with a single element currentCategory
-  useEffect(() => {
-    document.title = capitalizeFirstLetter(currentCategory.name);
-  }, [currentCategory]);
 
   return (
     <header className="flex-row px-1">
@@ -37,6 +32,6 @@ function Nav(props) {
       </nav>
     </header>
   );
-} // end of function Nav
+}
 
 export default Nav;
