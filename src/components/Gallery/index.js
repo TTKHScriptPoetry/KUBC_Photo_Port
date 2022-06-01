@@ -16,6 +16,11 @@ import PhotoList from '../PhotoList';
 
 // Utilize props since Gallary is signaled to be child of App.js
 function Gallery(props) {
+  // const currentCategory = {
+  //   name: "commercial",
+  //   description:
+  //     "Photos of grocery stores, food trucks, and other commercial projects",
+  // };
   const { currentCategory } = props;
   return (
     <section>
