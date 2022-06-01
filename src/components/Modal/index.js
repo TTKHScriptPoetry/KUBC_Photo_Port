@@ -1,6 +1,7 @@
 import React from 'react';
 
-function Modal({currentPhoto}) {
+// function Modal({currentPhoto, currentPhoto  }) { // not gonna work, must use errow function
+  const Modal = ({ onClose, currentPhoto }) => {
   const {name, category, description, index} = currentPhoto;
 
   return (
@@ -9,7 +10,7 @@ function Modal({currentPhoto}) {
         <h3 className="modalTitle">{name}</h3>
         <img src={require(`../../assets/large/${category}/${index}.jpg`)} alt="current category" />
         <p>{description}</p>
-        <button type="button">
+        <button onClick={onClose} type="button">
           Close this modal
         </button>
       </div>
